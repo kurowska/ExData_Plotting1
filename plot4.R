@@ -8,9 +8,6 @@ thedata <- read.table(thefile, header=TRUE, sep=";", na.string="?")
 subset_data <- subset(thedata, Date %in% c("1/2/2007","2/2/2007"))
 rm(thedata)
 
-#open a png device
-png("plot4.png", width=480, height=480)
-
 #get sub_metering variables, use as.numeric(), because R says it's not numeric
 sub_metering1 <- as.numeric(subset_data$Sub_metering_1, na.rm = TRUE)
 sub_metering2 <- as.numeric(subset_data$Sub_metering_2, na.rm = TRUE)
